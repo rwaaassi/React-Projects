@@ -256,7 +256,8 @@ ul {
 /* optional */
 
 body {
-  background: var(--primary-100);
+  /* background: var(--primary-100); */
+  background-image: url("https://film-grab.com/wp-content/uploads/photo-gallery/Perfect_Blue_028.jpg?bwg=1569600821");
 }
 main {
   min-height: 100vh;
@@ -269,7 +270,8 @@ main {
 .container {
   width: 90vw;
   margin: 5rem auto;
-  background: var(--white);
+  /* background: var(--white); */
+  background: #ece9e9;
   border-radius: var(--borderRadius);
   padding: 2.5rem;
   max-width: 800px;

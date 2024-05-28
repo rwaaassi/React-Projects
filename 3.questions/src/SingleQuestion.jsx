@@ -9,7 +9,7 @@ const SingleQuestion = ({ title, info }) => {
         <button className="question-btn" onClick={() => setShowInfo(!showInfo)}>
           {" "}
           {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
-          Click
+          
         </button>
       </header>
       {showInfo && <p>{info}</p>}
