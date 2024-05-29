@@ -3,25 +3,25 @@ import Menu from "./menu";
 import Categories from "./Categories";
 import Title from "./Title";
 import items from "./data";
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+const allCategories = ["all", ...new Set(items.map((item) => item.genre))];
 
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
 
-  const filterItems = (category) => {
-    if (category === "all") {
+  const filterItems = (genre) => {
+    if (genre === "all") {
       setMenuItems(items);
       return;
     }
-    const newItems = items.filter((item) => item.category === category);
+    const newItems = items.filter((item) => item.genre === genre);
     setMenuItems(newItems);
   };
 
   return (
     <main>
       <section className="menu">
-        <Title text="our menu" />
+        <Title text="our book collection" />
         <Categories categories={categories} filterItems={filterItems} />
         <Menu items={menuItems} />
       </section>

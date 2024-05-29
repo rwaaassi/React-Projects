@@ -4,8 +4,8 @@ import MenuItem from "./MenuItem";
 const Menu = ({ items }) => {
   return (
     <div className="section-center">
-      {items.map((menuItem) => {
-        return <MenuItem key={menuItem.id} {...menuItem} />;
+      {items.map((bookItem) => {
+        return <MenuItem key={bookItem.id} {...bookItem} />;
       })}
     </div>
   );
