@@ -1,19 +1,21 @@
-import { useState, useRef} from "react";
-import {FaBars} from "react-icons/fa"
-import {links, social} from './data'
-import logo from './logo.svg'
-
+import { useState, useRef } from "react";
+import { FaBars } from "react-icons/fa";
+import { links, social } from "./data";
+import logo from "./logo.svg";
 const Navbar = () => {
-  const [isShowLinks, setIsShowLinks] = useState(false);
-  const linksContainerRef = useRef(null)
-  const linksRef = useRef(null)
-  const toggleLinks = () => {
+  const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
 
-    setIsShowLinks(!isShowLinks)
-  }
-const linkStyles = {
-height: isShowLinks? `${linksRef.current.getBoundClientRect().height}px` : `0px`
-}
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
+  const linkStyles = {
+    height: showLinks
+      ? `${linksRef.current.getBoundingClientRect().height}px`
+      : "0px",
+  };
   return (
     <nav>
       <div className="nav-center">
@@ -23,6 +25,7 @@ height: isShowLinks? `${linksRef.current.getBoundClientRect().height}px` : `0px`
             <FaBars />
           </button>
         </div>
+
         <div
           className="links-container"
           ref={linksContainerRef}
@@ -51,7 +54,6 @@ height: isShowLinks? `${linksRef.current.getBoundClientRect().height}px` : `0px`
           })}
         </ul>
       </div>
-      ;
     </nav>
   );
 };
